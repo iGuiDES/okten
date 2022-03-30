@@ -1,2 +1,2 @@
 ## Module HTML
-[Homework 1](https://github.com/iGuiDES/okten-web/tree/main/html/lesson1)
+[Homework 1](https://iguides.github.io/okten-web/html/lesson1/index.html)
