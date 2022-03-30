@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fec356;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.family-simson {
+    margin-bottom: 40px;
+}
+
+.family-simson > h1 {
+    text-align: center;
+}
+
+.description-serial {
+    display: flex;
+    align-items: center;
+}
+
+.description-serial > p {
+    margin-left: 50px;
+}
+
+.group-photo-simson {
+    width: 300px;
+}
+
+.simpson {
+    width: 100%;
+    padding: 35px;
+    margin-bottom: 35px;
+    border-radius: 25px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.homer-simpson, .bart-simpson {
+    background-color: #f1c28e;
+}
+
+.marge-simpson, .liza-simpson {
+    background-color: #d29f9f;
+}
+
+.simpson > h2 {
+    text-align: center;
+}
+.info > img {
+    width: 300px;
+    height: 500px;
+    display: block;
+    margin: 30px auto;
+
+}
+ul {
+    margin-top: 25px;
+}
