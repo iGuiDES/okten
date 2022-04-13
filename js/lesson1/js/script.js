@@ -45,19 +45,19 @@ console.log(false1);
 // alert(false1);
 
 // Return a value to the body
-document.write(`<div>${sayHello}</div>`);
-document.write(`<div>${owu}</div>`);
-document.write(`<div>${octet}</div>`);
-document.write(`<div>${ua}</div>`);
-document.write(`<div>${n1}</div>`);
-document.write(`<div>${n10}</div>`);
-document.write(`<div>${numDec}</div>`);
-document.write(`<div>${n123}</div>`);
-document.write(`<div>${pi}</div>`);
-document.write(`<div>${n2}</div>`);
-document.write(`<div>${n16}</div>`);
-document.write(`<div>${true1}</div>`);
-document.write(`<div>${false1}</div>`);
+document.write(`<div class="inner-text">${sayHello}</div>`);
+document.write(`<div class="inner-text">${owu}</div>`);
+document.write(`<div class="inner-text">${octet}</div>`);
+document.write(`<div class="inner-text">${ua}</div>`);
+document.write(`<div class="inner-text">${n1}</div>`);
+document.write(`<div class="inner-text">${n10}</div>`);
+document.write(`<div class="inner-text">${numDec}</div>`);
+document.write(`<div class="inner-text">${n123}</div>`);
+document.write(`<div class="inner-text">${pi}</div>`);
+document.write(`<div class="inner-text">${n2}</div>`);
+document.write(`<div class="inner-text">${n16}</div>`);
+document.write(`<div class="inner-text">${true1}</div>`);
+document.write(`<div class="inner-text">${false1}</div>`);
 
 // Task 2
 const bookNoAuthors = {
