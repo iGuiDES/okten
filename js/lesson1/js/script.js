@@ -109,17 +109,32 @@ const books = [
     {
         name: 'Book 1',
         page: 600,
-        genre: 'Programming'
+        genre: 'Programming',
+        authors: [
+            'Author 1',
+            'Author 2',
+            'Author 3',
+        ],
     },
     {
         name: 'Book 2',
         page: 456,
-        genre: 'Horror'
+        genre: 'Horror',
+        authors: [
+            'Author 1',
+            'Author 2',
+            'Author 3',
+        ],
     },
     {
         name: 'Book 3',
         page: 300,
-        genre: 'History'
+        genre: 'History',
+        authors: [
+            'Author 1',
+            'Author 2',
+            'Author 3',
+        ],
     },
 ];
 
