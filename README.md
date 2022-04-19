@@ -9,3 +9,5 @@
 
 ## Module JavaScript
 [Homework 1 - Intro](https://iguides.github.io/okten-web/js/lesson1/index.html)
+
+[Homework 2 - if, else, switch](https://iguides.github.io/okten-web/js/lesson2/index.html)
