@@ -11,3 +11,5 @@
 [Homework 1 - Intro](https://iguides.github.io/okten-web/js/lesson1/index.html)
 
 [Homework 2 - if, else, switch](https://iguides.github.io/okten-web/js/lesson2/index.html)
+
+[Homework 3 - while, do while, for, for of, for in](https://iguides.github.io/okten-web/js/lesson3/index.html)
