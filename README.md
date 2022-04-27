@@ -14,4 +14,6 @@
 
 [Homework 3 - while, do while, for, for of, for in](https://iguides.github.io/okten-web/js/lesson3/index.html)
 
-[Homework 4 - Functions](https://iguides.github.io/okten-web/js/lesson4/index.html)
+[Homework 4 - Functions (Part 1)](https://iguides.github.io/okten-web/js/lesson4/index.html)
+
+[Homework 5 - Functions (Part 2)](https://iguides.github.io/okten-web/js/lesson5/index.html)
