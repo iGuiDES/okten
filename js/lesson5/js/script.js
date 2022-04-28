@@ -4,7 +4,18 @@ const numbers = [1, 5, 10, 4, 89, 100, 15, -25, 0, -50];
 const liteArray = [1, 2, 3];
 const random = [];
 const limitNum = [];
-
+const users = [
+    {
+        id: 1,
+        name: 'John',
+        age: 28
+    },
+    {
+        id: 2,
+        name: 'Petr',
+        age: 39
+    }
+];
 
 // - створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
 
@@ -158,3 +169,17 @@ console.groupEnd();
 // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
 //
 // -створити функцію, яка приймає масив з 2х об'єктів, та міняє їх місцями.
+
+const recursiveObj = (array) => {
+    const resultArray = [];
+    for (let i = array.length - 1; i >= 0; i--) {
+        resultArray.push(array[i]);
+    }
+
+    return resultArray;
+}
+
+console.group('Task N');
+console.log('Original Array: ', users);
+console.log('Reverse Array', recursiveObj(users));
+console.groupEnd();
