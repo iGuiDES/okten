@@ -17,3 +17,5 @@
 [Homework 4 - Functions (Part 1)](https://iguides.github.io/okten/js/lesson4/index.html)
 
 [Homework 5 - Functions (Part 2)](https://iguides.github.io/okten/js/lesson5/index.html)
+
+[Homework 6 - Method string array](https://iguides.github.io/okten/js/lesson6/index.html)
