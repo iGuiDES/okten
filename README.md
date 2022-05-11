@@ -21,3 +21,5 @@
 [Homework 6 - Method string array](https://iguides.github.io/okten/js/lesson6/index.html)
 
 [Homework 7 - Classes](https://iguides.github.io/okten/js/lesson7/index.html)
+
+[Homework 8 - DOM](https://iguides.github.io/okten/js/lesson8/index.html)
