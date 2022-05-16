@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: bisque;
+}
+
+
+.content {
+    max-width: 800px;
+    width: 100%;
+    border: 1px solid green;
+    border-radius: 25px;
+    background-color: #e1c9ad;
+    color: white;
+    margin: 40px auto;
+    padding: 40px;
+}
+
+/* Task 1 */
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: bisque;
+    height: 100px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.link {
+    width: 100%;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+.link:hover {
+    border: 2px solid blue;
+    color: red;
+}
+
+
+.cards, .cards-classes {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card,
+.item {
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: bisque;
+    color: blue;
+    border: 1px solid green;
+    border-radius: 25px;
+}
+
+.item {
+    width: 290px;
+    height: 200px;
+    color: #42a5f5;
+}
+
+/* Back to home */
+
+.back {
+    max-width: 1200px;
+    margin: 40px auto;
+}
+.back > button {
+    background: none;
+    border: none;
+}
+.back > button > a {
+    display: block;
+    background-color: #c4fdff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+}
+.back > button > a:hover {
+    background-color: #866e50;
+    color: white;
+}
+
+/* Task 2 */
+
+.member {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px 0 20px 40px;
+    color: blue;
+}
+
+img {
+    text-align: center;
+}
+
+.m20 {
+    margin-top: 20px;
+}
