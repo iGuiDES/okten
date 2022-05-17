@@ -23,3 +23,5 @@
 [Homework 7 - Classes](https://iguides.github.io/okten/js/lesson7/index.html)
 
 [Homework 8 - DOM](https://iguides.github.io/okten/js/lesson8/index.html)
+
+[Homework 9 - Events](https://iguides.github.io/okten/js/lesson9/index.html)

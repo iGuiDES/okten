@@ -106,6 +106,7 @@ const coursesArray = [
         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
     }
 ];
+
 // - є масив simpsons ...
 // Проітерувати його, створиши для кожного елементу масиву <div class='member'>.
 // - взяти попередній масив з сімпсонами.
@@ -161,24 +162,35 @@ setMembers(simpsons);
 function createBlockWithProperty(array) {
     const content = document.querySelector('.content-info');
 
-    for (let item of array) {
-        const block = document.createElement('div');
+    array.forEach((item, index) => {
         const title = document.createElement('h2');
-        const month = document.createElement('span');
-        const hour = document.createElement('p');
+        const month = document.createElement('p');
+        const hour = document.createElement('span');
         const module = document.createElement('ul');
-        const lists = document.createElement('li');
+        const value = item.modules;
 
-        for (let key in item) {
+        title.innerText = item.title;
+        month.innerText = item.monthDuration;
+        hour.innerText = item.hourDuration;
 
-            title.innerText = item.title;
-            month.innerText = item.month;
-            // hour.innerText = item.module[key];
-            console.log(item.module);
+        for (let j = 0; j < value.length; j++) {
+            const list = document.createElement('li');
+            list.innerText = value[j];
+            module.appendChild(list);
+
         }
 
-        block.classList.add('member');
-    }
+        title.classList.add('title-block');
+        month.classList.add('month-block');
+        hour.classList.add('hour-block');
+        module.classList.add('links-block');
+
+        content.appendChild(title)
+        content.appendChild(month);
+        content.appendChild(hour);
+        content.appendChild(module);
+
+    });
 }
 
 createBlockWithProperty(coursesArray);

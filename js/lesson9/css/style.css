@@ -113,3 +113,38 @@ img {
 .m20 {
     margin-top: 20px;
 }
+
+.title-block,
+.month-block,
+.hour-block {
+    text-align: center;
+}
+
+.title-block {
+    color: red;
+    font-size: 22px;
+    border-bottom: 2px solid green;
+    margin: 25px 0;
+}
+
+.month-block {
+    color: blue;
+    font-size: 24px;
+    margin: 10px;
+}
+
+.hour-block {
+    background-color: cadetblue;
+    font-size: 22px;
+    display: block;
+}
+
+.links-block {
+    background-color: bisque;
+    color: black;
+    padding-left: 40px;
+}
+
+.links-block > li {
+    padding: 10px;
+}

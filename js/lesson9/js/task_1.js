@@ -57,7 +57,6 @@ function createLinks() {
 
         menu.append(createLinkGroup);
     }
-
 }
 
 createLinks();
@@ -126,8 +125,6 @@ function createBlockDurationsWithClasses(array) {
         wrapper.appendChild(description);
 
         cards.appendChild(wrapper);
-
-
     }
 }
 
