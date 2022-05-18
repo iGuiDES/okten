@@ -142,11 +142,7 @@ function setMembers(array) {
         description.innerText = item.info;
         photo.setAttribute('src', `${item.photo}`);
 
-        members.appendChild(name);
-        members.appendChild(surname);
-        members.appendChild(age);
-        members.appendChild(description);
-        members.appendChild(photo);
+        members.append(name, surname, age, description, photo);
 
         content.appendChild(members);
     }
@@ -185,10 +181,7 @@ function createBlockWithProperty(array) {
         hour.classList.add('hour-block');
         module.classList.add('links-block');
 
-        content.appendChild(title)
-        content.appendChild(month);
-        content.appendChild(hour);
-        content.appendChild(module);
+        content.append(title, month, hour, module);
 
     });
 }

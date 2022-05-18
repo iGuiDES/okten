@@ -55,7 +55,7 @@ function createLinks() {
 
         createLinkGroup.appendChild(link);
 
-        menu.append(createLinkGroup);
+        menu.appendChild(createLinkGroup);
     }
 }
 
@@ -86,8 +86,7 @@ function createBlockDurations(array) {
         mounts.innerText = item.monthDuration;
         card.classList.add('card');
 
-        card.appendChild(title)
-        card.appendChild(mounts);
+        card.append(title, mounts);
         cards.appendChild(card);
     }
 }
@@ -121,8 +120,7 @@ function createBlockDurationsWithClasses(array) {
         title.classList.add('heading');
         description.classList.add('description');
 
-        wrapper.appendChild(title);
-        wrapper.appendChild(description);
+        wrapper.append(title, description);
 
         cards.appendChild(wrapper);
     }
