@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: bisque;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 15px auto;
+    padding: 20px;
+    border: 1px solid darkslategrey;
+    border-radius: 25px;
+}
+
+#text {
+    width: 70%;
+    height: 300px;
+    margin: 20px auto;
+    border: 1px solid green;
+    border-radius: 25px;
+    background-color: #a28e76;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 15px;
+    background-color: #f1a74e;
+    color: darkred;
+    font-size: 18px;
+    text-align: center;
+}
+
+.person-data {
+    padding: 25px;
+}
+
+input {
+    background-color: bisque;
+    padding: 10px;
+    border: 1px solid green;
+    border-radius: 10px;
+}
+
+.out-task-2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid green;
+}
+
+thead th:nth-child(1) {
+    width: 30%;
+}
+
+thead th:nth-child(2) {
+    width: 20%;
+}
+
+thead th:nth-child(3) {
+    width: 15%;
+}
+
+thead th:nth-child(4) {
+    width: 35%;
+}
+
+th, td {
+    padding: 20px;
+}
