@@ -52,7 +52,8 @@ input {
     border-radius: 10px;
 }
 
-.out-task-2 {
+.out-task-2,
+.out-task-3 {
     margin-bottom: 20px;
     text-align: center;
 }

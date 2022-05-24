@@ -58,6 +58,8 @@ function getFormsData() {
     userData.email = formOne.email.value;
     userData.profession = {job: formTwo.working.value};
     userData.study = {school: formTwo.school.value};
+    
+    out.innerHTML = '<h3>Результати в консолі!</h3>'
 
     console.log(userData);
 }
