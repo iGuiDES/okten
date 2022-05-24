@@ -58,8 +58,12 @@ function getFormsData() {
     userData.email = formOne.email.value;
     userData.profession = {job: formTwo.working.value};
     userData.study = {school: formTwo.school.value};
-    
-    out.innerHTML = '<h3>Результати в консолі!</h3>'
+
+    out.innerHTML = '<h3>Результати в консолі!</h3>';
+    formOne.name.value = '';
+    formOne.email.value = '';
+    formTwo.working.value = '';
+    formTwo.school.value = '';
 
     console.log(userData);
 }
@@ -97,6 +101,10 @@ function createTable() {
                 tr.appendChild(td);
             }
         }
+
+        formTaskFour.row.value = 0;
+        formTaskFour.cell.value = 0;
+        formTaskFour.info.value = '';
 
         out.appendChild(table);
     });
