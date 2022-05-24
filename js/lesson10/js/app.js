@@ -49,6 +49,7 @@ document.getElementById('btn-2').addEventListener('click', validator);
 // Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
 
 function getFormsData() {
+    const out = document.querySelector('.out-task-3');
     const formOne = document.forms['form1'];
     const formTwo = document.forms['form2'];
     const userData = {}
@@ -68,31 +69,35 @@ document.getElementsByClassName('task3')[0].addEventListener('click', getFormsDa
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
 
-const formTaskFour = document.forms['form4'];
-const btn = formTaskFour.send;
+function createTable() {
+    const formTaskFour = document.forms['form4'];
+    const btn = formTaskFour.send;
 
-btn.addEventListener('click', function(e) {
-    e.preventDefault();
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
 
-    const out = document.querySelector('.out-task-4');
-    const table = document.createElement('table');
+        const out = document.querySelector('.out-task-4');
+        const table = document.createElement('table');
 
-    const row = formTaskFour.row.value;
-    const cell = formTaskFour.cell.value;
-    const info = formTaskFour.info.value;
+        const row = formTaskFour.row.value;
+        const cell = formTaskFour.cell.value;
+        const info = formTaskFour.info.value;
 
-    out.innerHTML = '';
+        out.innerHTML = '';
 
-    for (let i = 1; i <= row; i++) {
-        const tr = document.createElement('tr');
-        table.appendChild(tr);
+        for (let i = 1; i <= row; i++) {
+            const tr = document.createElement('tr');
+            table.appendChild(tr);
 
-        for (let j = 1; j <= cell; j++) {
-            const td = document.createElement('td');
-            td.innerText = info + ' ' + i + j;
-            tr.appendChild(td);
+            for (let j = 1; j <= cell; j++) {
+                const td = document.createElement('td');
+                td.innerText = info + ' ' + i + j;
+                tr.appendChild(td);
+            }
         }
-    }
 
-    out.appendChild(table);
-});
+        out.appendChild(table);
+    });
+}
+
+createTable();
