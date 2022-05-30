@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: bisque;
+}
+
+span {
+    display: block;
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.heading {
+    margin: 35px 0;
+    text-align: center;
+}
+
+#users-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+.post {
+    width: 17%;
+    height: 180px;
+    border: 1px solid green;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px ;
+}
+
+.post > span {
+    border-bottom: 3px solid green;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.post:hover {
+    background-color: #634624;
+    color: white;
+}
+
+/* Task 2 */
+ul {
+    list-style: none;
+    border-left: 2px solid darkgreen;
+}
+
+#users-comments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2%;
+}
+
+.comment {
+    width: 30%;
+    height: 340px;
+    margin-bottom:   25px;
+    padding: 25px 10px 25px 35px;
+    background-color: #b29e86;
+    border: 1px solid darkgreen;
+    border-radius: 25px;
+}
+
+.comment > p, span {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.comment > h3 {
+    margin-bottom: 20px;
+}
+
+ul > li {
+    padding-left: 35px;
+    margin-bottom: 20px;
+}
+
+ul > li:before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: bisque;
+    margin-right: 10px;
+}
+
+.comment:hover {
+    background-color: bisque;
+    border: 2px solid green;
+}
+
