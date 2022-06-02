@@ -31,3 +31,5 @@
 [Homework 11 - BOM](https://iguides.github.io/okten/js/lesson11/index.html)
 
 [Homework 12 - Fetch](https://iguides.github.io/okten/js/lesson12/index.html)
+
+[Project - Final](https://iguides.github.io/okten/js/project/index.html)
