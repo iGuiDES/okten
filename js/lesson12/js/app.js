@@ -8,6 +8,7 @@
 fetch('https://jsonplaceholder.typicode.com/posts')
     .then(value => value.json())
     .then(posts => {
+
         for (const element of posts) {
 
             const usersPosts = document.getElementById('users-posts');
