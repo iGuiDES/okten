@@ -13,6 +13,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userID}`)
     .then(user => {
         const infoBlock = document.getElementById('info-user');
         const postsBlock = document.createElement('div');
+        const heading = document.querySelector('.wrap-head');
         const button = document.createElement('button');
         const link = document.createElement('a');
 
@@ -21,8 +22,11 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userID}`)
             const details = document.createElement('div');
             const subInformation = document.createElement('div');
 
-
             const ul = document.createElement('ul');
+            const address = document.createElement('h4');
+            const geo = document.createElement('h4');
+            const company = document.createElement('h4');
+
             const valueObj = user[item];
 
             details.classList.add('user-details-info');
@@ -31,6 +35,17 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userID}`)
             link.setAttribute('href', '#');
             link.innerText = 'Post of current user';
 
+            heading.innerHTML = `${user['name']}`;
+
+            if (item === 'address') {
+                address.innerText = item;
+            }
+
+            if (item === 'company') {
+                company.innerText = item;
+            }
+
+
             button.appendChild(link);
 
             if (typeof valueObj !== 'object') {
@@ -38,25 +53,31 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userID}`)
                 details.innerHTML = `<div class="details-informations">${item} : ${user[item]}</div>`;
 
             } else {
-                for (const item in valueObj) {
-                    if (typeof valueObj[item] !== 'object') {
 
+                for (const item in valueObj) {
+
+                    if (item === 'geo') {
+                        geo.innerText = item;
+                    }
+
+                    if (typeof valueObj[item] !== 'object') {
                         const li = document.createElement('li');
+
                         li.innerHTML = `<p class="addressing">${item} : ${valueObj[item]}</p>`;
                         ul.append(li);
 
                     } else {
-
                         const ol = document.createElement('ol');
                         for (const key in valueObj[item]) {
 
                             const li = document.createElement('li');
+
                             li.innerHTML = `<p class="geo">${key} : ${valueObj[item][key]}</p>`;
-                            ol.appendChild(li);
+                            ol.append(li);
                         }
-                        ul.append(ol);
+                        ul.append(geo, ol);
                     }
-                    subInformation.append(ul);
+                    subInformation.append(address, company, ul);
                 }
             }
             infoBlock.append(details, subInformation);
