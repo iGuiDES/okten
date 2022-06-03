@@ -36,7 +36,7 @@ function turnOffIron(action) {
             } else {
                 reject('Забув вимкнути праску, зустрічі не буде!', action);
             }
-        }, 1500);
+        }, 1700);
 
     });
 }
@@ -50,7 +50,7 @@ function goToMeeting(meeting, time) {
             } else {
                 reject('Співрозмовник залишив місце зустрічі...', meeting, time);
             }
-        }, 1200);
+        }, 400);
 
     });
 }
@@ -93,7 +93,7 @@ function goToMeeting(meeting, time) {
 
 // Async
 
-async function goToMeeting() {
+async function goMeeting() {
     try {
         const up = await wakeUp(6);
 
@@ -134,4 +134,4 @@ async function goToMeeting() {
     }
 }
 
-goToMeeting();
+goMeeting();
