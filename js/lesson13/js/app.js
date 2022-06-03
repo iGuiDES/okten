@@ -9,8 +9,9 @@
  */
 
 const container = document.querySelector('.container');
+const content = document.querySelector('.content');
 
-async function wakeUp(time) {
+function wakeUp(time) {
     return new Promise((resolve, reject) => {
 
         setTimeout(() => {
@@ -26,7 +27,7 @@ async function wakeUp(time) {
     });
 }
 
-async function turnOffIron(action) {
+function turnOffIron(action) {
     return new Promise((resolve, reject) => {
 
         setTimeout(() => {
@@ -40,7 +41,7 @@ async function turnOffIron(action) {
     });
 }
 
-async function goToMeeting(meeting, time) {
+function goToMeeting(meeting, time) {
     return new Promise((resolve, reject) => {
 
         setTimeout(() => {
@@ -54,47 +55,83 @@ async function goToMeeting(meeting, time) {
     });
 }
 
-wakeUp(7)
-    .then((time) => {
+// wakeUp(7)
+//
+//     .then((action) => {
+//         const div = document.createElement('div');
+//         div.innerHTML = `<h3 class="green">${action}</h3>`;
+//         div.classList.add('green-block');
+//
+//         container.appendChild(div);
+//
+//         return goToMeeting(true, 9);
+//     })
+//     .then((meeting) => {
+//         const div = document.createElement('div');
+//         div.innerHTML = `<h3 class="green">${meeting}</h3>`;
+//         div.classList.add('green-block');
+//
+//         container.appendChild(div);
+//     })
+//     .catch((e) => {
+//         const div = document.createElement('div');
+//         div.innerHTML = `<h3 class="red">${e}</h3>`;
+//         div.classList.add('red-block');
+//
+//         container.appendChild(div);
+//     })
+//     .finally(
+//         function () {
+//             const div = document.createElement('div');
+//             div.innerHTML = `<h3 class="green">Додому!</h3>`;
+//             div.classList.add('green-block');
+//
+//             container.appendChild(div);
+//         }
+//     );
 
-        const div = document.createElement('div');
-        div.innerHTML = `<h3 class="green">${time}</h3>`;
-        div.classList.add('green-block');
 
-        container.appendChild(div);
+// Async
 
-        return turnOffIron(true);
-    })
-    .then((action) => {
-        const div = document.createElement('div');
-        div.innerHTML = `<h3 class="green">${action}</h3>`;
-        div.classList.add('green-block');
+async function goToMeeting() {
+    try {
+        const up = await wakeUp(6);
 
-        container.appendChild(div);
+        const block1 = document.createElement('div');
+        block1.innerHTML = `<h3 class="green">${up}</h3>`;
+        block1.classList.add('green-block');
 
-        return goToMeeting(true, 9);
-    })
-    .then((meeting) => {
-        const div = document.createElement('div');
-        div.innerHTML = `<h3 class="green">${meeting}</h3>`;
-        div.classList.add('green-block');
+        content.appendChild(block1);
 
-        container.appendChild(div);
-    })
-    .catch((e) => {
-        const div = document.createElement('div');
-        div.innerHTML = `<h3 class="red">${e}</h3>`;
-        div.classList.add('red-block');
+        const readyMeeting = await turnOffIron(true);
 
-        container.appendChild(div);
-    })
-    .finally(
-        function () {
-            const div = document.createElement('div');
-            div.innerHTML = `<h3 class="green">Додому!</h3>`;
-            div.classList.add('green-block');
+        const block2 = document.createElement('div');
+        block2.innerHTML = `<h3 class="green">${readyMeeting}</h3>`;
+        block2.classList.add('green-block');
 
-            container.appendChild(div);
-        }
-    )
+        content.appendChild(block2);
 
+        const tripToTheMeeting = await goToMeeting(true, 9);
+
+        const block3 = document.createElement('div');
+        block3.innerHTML = `<h3 class="green">${tripToTheMeeting}</h3>`;
+        block3.classList.add('green-block');
+
+        content.appendChild(block3);
+
+    } catch (e) {
+        const blockError = document.createElement('div');
+        blockError.innerHTML = `<h3 class="red">${e}</h3>`;
+        blockError.classList.add('red-block');
+
+        content.appendChild(blockError);
+    } finally {
+            const finalyBlock = document.createElement('div');
+            finalyBlock.innerHTML = `<h3 class="green">Додому!</h3>`;
+            finalyBlock.classList.add('green-block');
+
+            content.appendChild(finalyBlock);
+    }
+}
+
+goToMeeting();
