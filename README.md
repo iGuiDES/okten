@@ -32,4 +32,6 @@
 
 [Homework 12 - Fetch](https://iguides.github.io/okten/js/lesson12/index.html)
 
+[Homework 13 - Async](https://iguides.github.io/okten/js/lesson13/index.html)
+
 [Project - Final](https://iguides.github.io/okten/js/project/index.html)
