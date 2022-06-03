@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.green {
+    color: green;
+    padding: 20px 10px;
+    margin: 20px 10px;
+}
+
+.green-block  {
+    border: 1px solid green;
+    border-radius: 25px;
+    margin: 20px 0;
+}
+
+.red-block {
+    border: 1px solid red;
+    border-radius: 25px;
+    margin: 20px 0;
+}
+
+.red {
+    color: red;
+    padding: 20px 10px;
+    margin: 20px 10px;
+}
