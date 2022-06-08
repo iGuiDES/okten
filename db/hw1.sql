@@ -36,10 +36,34 @@ select * from cars where model='audi' and year<2014;
 select * from cars limit 5;
 
 # найти последнии 5 машин
+
+select * from cars order by id desc limit 5;
+
 # найти среднее арифметическое цен машин модели KIA
+
+select avg(price) from cars;
+
 # найти среднее арифметическое цен каждой машины
+
+select avg(price) as price, model from cars group by model;
+
 # посчитать количество каждой марки машин
+
+select count(*) as count, model from cars group by model;
+
 # найти марку машины количество которых больше всего
+
+select count(*) as count, model from cars group by model order by count desc limit 1;
+
 # найти все машины в модели которых вторая и предпоследняя буква "а"
+
+select id, model from cars where model like '%a%';
+
 # найти все машины модели которых больше 8 символов
+
+select id, model from cars where length(model) > 8;
+
 # ***найти машины цена которых больше чем цена среднего арифметического всех машин
+
+select id, model, price from cars where price > (select avg(price) from cars);
+

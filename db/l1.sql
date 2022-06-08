@@ -42,6 +42,13 @@ select * from users order by name desc; #asc
 
 select * from users limit 2;
 
+select distinct name from users; # Уникальные имена
+
+select min(age) from users
+union
+select max(age) from users;
+
+
 
 
 
