@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    width: 100%;
+    background-color: #d8b48a;
+    color: green;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 25px;
+}
+
+.heading > header {
+    text-align: center;
+    padding: 20px 0;
+}

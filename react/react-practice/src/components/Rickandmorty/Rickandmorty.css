@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: bisque;
+}
+
+img {
+    border-radius: 20px;
+}
+
+.App {
+    max-width: 900px;
+    width: 100%;
+    margin: 20px auto;
+}
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #d8b48a;
+    border: none;
+    border-radius: 25px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.content-info {
+    width: 60%;
+    padding-left: 45px;
+}
