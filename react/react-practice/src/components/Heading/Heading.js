@@ -1,10 +1,10 @@
 export default function Heading(props) {
-    const {} = props;
+    const {title} = props;
 
     return (
         <div className={'heading'}>
             <header>
-                <h1>Task 2 - Rick and Morty</h1>
+                <h1>{title}</h1>
             </header>
         </div>
     )

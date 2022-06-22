@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-        <Heading />
+        <Heading title={'Task 2 - Rick and Morty'}/>
         <Rickandmorty
             id={1}
             name={'Rick Sanchez'}
@@ -63,7 +63,6 @@ function App() {
             gender={'Female'}
             image={'https://rickandmortyapi.com/api/character/avatar/6.jpeg'}
         />
-
     </div>
   );
 }
