@@ -1,0 +1,27 @@
+.user-details-info {
+    background-color: #a6a6cb;
+    opacity: .7;
+    padding: 10px 30px;
+    margin-bottom: 15px;
+}
+
+.user-details-info:hover {
+    background-color: #9595cc;
+    opacity: 1;
+}
+
+.show-details {
+    display: flex;
+    justify-content: center;
+}
+
+.button-details {
+    width: 40%;
+    margin: 20px 0;
+    border: none;
+    border-radius: 25px;
+    background-color: blue;
+    color: whitesmoke;
+    padding: 15px 0;
+    font-size: 14px;
+}
