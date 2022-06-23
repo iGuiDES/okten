@@ -1,0 +1,31 @@
+.content-spacex {
+    background-color: bisque;
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.content-spacex-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    padding: 5px 40px;
+}
+
+.content-spacex-block:hover {
+    background-color: #4b4848;
+    opacity: .8;
+    color: white;
+}
+
+.content-spacex-info {
+    width: 60%;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
