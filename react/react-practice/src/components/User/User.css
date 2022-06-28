@@ -1,0 +1,20 @@
+.wrapper {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 20px;
+    border: 1px solid #614525;
+    border-radius: 25px;
+}
+
+.button-get-posts {
+    padding: 10px 20px;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.button-get-posts:hover {
+    background-color: green;
+    color: white;
+}
