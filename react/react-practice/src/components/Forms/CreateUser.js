@@ -45,15 +45,10 @@ export default function CreateUser({users}) {
                 <input
                     {...register('phone')}
                 />
-                <span className={'title-forms'}>Company</span>
+                <span className={'title-forms'}>Company name</span>
                 <input
                     {...register('company.name')}
                 />
-                <select {...register('userId')}>
-                    {
-                        users?.map(user => <option key={user.id} value={user.id}>{user.name}</option>)
-                    }
-                </select>
                 <button>Create user</button>
             </form>
         </div>
