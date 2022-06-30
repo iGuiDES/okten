@@ -1,6 +1,6 @@
 const Submit = (data) => {
 
-    fetch('https://jsonplaceholder.typicode.com/posts', {
+    fetch('https://jsonplaceholder.typicode.com/comments', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {

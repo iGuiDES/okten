@@ -1,5 +1,5 @@
-import AddPost from "./Forms/AddPost";
+import AddComment from "./Forms/AddComment";
 
 export {
-    AddPost
+    AddComment
 }

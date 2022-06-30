@@ -2,7 +2,7 @@ import './App.css';
 import React, {useEffect, useState} from 'react';
 
 import {getUsersFetch} from "./services";
-import {AddPost} from "./components";
+import {AddComment} from "./components";
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-        <AddPost users={users} />
+        <AddComment users={users} />
     </div>
   );
 }
