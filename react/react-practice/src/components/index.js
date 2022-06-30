@@ -1,5 +1,5 @@
-import AddPost from "./Forms/AddPost";
+import CreateUser from "./Forms/CreateUser";
 
 export {
-    AddPost
+    CreateUser
 }
