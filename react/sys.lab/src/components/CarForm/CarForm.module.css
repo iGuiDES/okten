@@ -1,0 +1,22 @@
+.CarForm {
+    max-width: 900px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Error {
+    color: red;
+    text-align: center;
+}
+
+.Error span {
+    display: block;
+    margin-bottom: 10px;
+}
+
