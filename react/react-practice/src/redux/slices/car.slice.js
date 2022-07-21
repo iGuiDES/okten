@@ -1,4 +1,4 @@
-import {createSlice, createAsyncThunk, current} from "@reduxjs/toolkit";
+import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 
 import {carService} from "../../services";
 
@@ -35,7 +35,6 @@ const carSlice = createSlice({
     reducers: {
         setCarForUpdate: (state, action) => {
             state.carForUpdate = action.payload;
-            // console.log(current(state.cars));
         }
     },
 
