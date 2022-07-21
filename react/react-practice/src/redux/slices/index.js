@@ -1,2 +1,1 @@
-export * from './counter1.slice';
-export * from './counter2.slice';
+export * from './car.slice';
