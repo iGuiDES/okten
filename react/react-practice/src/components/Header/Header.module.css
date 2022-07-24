@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    padding: 15px;
+}
+
+.btn > button {
+    padding: 10px 20px;
+    margin-right: 10px;
+}
