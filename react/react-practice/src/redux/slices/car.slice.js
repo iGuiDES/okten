@@ -23,9 +23,37 @@ const getAll = createAsyncThunk(
 
 const updateByID = createAsyncThunk(
     'carSlice/updateByID',
-    async ({id, car}) => {
-        const {data} = await carService.updateById(id, car);
-        return data;
+    async ({id, car}, {rejectWithValue}) => {
+        try {
+            const {data} = await carService.updateById(id, car);
+            return data;
+        } catch (e) {
+            return rejectWithValue(e.response.data);
+        }
+    }
+);
+
+const create = createAsyncThunk(
+    'carSlice/create',
+    async ({car}, {rejectWithValue}) => {
+        try {
+            const {data} = await carService.create(car);
+            return data;
+        } catch (e) {
+            return rejectWithValue(e.response.data);
+        }
+    }
+);
+
+const del = createAsyncThunk(
+    'carSlice/delete',
+    async ({id}, {rejectWithValue}) => {
+        try {
+            await carService.deleteById(id);
+            return id;
+        } catch (e) {
+            return rejectWithValue(e.response.data);
+        }
     }
 );
 
@@ -44,14 +72,28 @@ const carSlice = createSlice({
                 state.errors = null;
                 state.cars = action.payload;
             })
-            .addCase(getAll.rejected, (state, action) => {
-                state.errors = action.payload;
-            })
             .addCase(updateByID.fulfilled, (state, action) => {
                 const currentCar = state.cars.find(car => car.id === action.payload.id);
                 Object.assign(currentCar, action.payload);
                 state.carForUpdate = null;
             })
+            .addCase(del.fulfilled, (state, action) => {
+                const index = state.cars.findIndex(car => car.id === action.payload);
+                state.cars.splice(index, 1);
+
+            })
+            .addCase(create.fulfilled, (state, action) => {
+                state.cars.push(action.payload);
+            })
+            .addDefaultCase((state, action) => {
+                const [type] = action.type.split('/').splice(-1);
+
+                if (type === 'rejected') {
+                    state.errors = action.payload;
+                } else {
+                    state.errors = null;
+                }
+            });
     }
 });
 
@@ -60,7 +102,9 @@ const {reducer: carReducer, actions: {setCarForUpdate}} = carSlice;
 const carActions = {
     getAll,
     setCarForUpdate,
-    updateByID
+    updateByID,
+    create,
+    del
 }
 
 export {
