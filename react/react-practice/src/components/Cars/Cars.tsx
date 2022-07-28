@@ -1,15 +1,17 @@
-import {FC, useEffect, useState} from "react";
-import {ICar} from "../../interfaces";
-import {carService} from "../../services";
+import {FC, useEffect} from "react";
+
 import {Car} from "../Car/Car";
+import {useAppDispatch, useAppSelector} from "../../hooks";
+import {carAction} from "../../redux";
 
 const Cars:FC = () => {
 
-    const [cars, setCars] = useState<ICar[]>([]);
+    const {cars} = useAppSelector(state => state.cars);
+    const dispatch = useAppDispatch();
 
     useEffect(() => {
-        carService.getAll().then(({data}) => setCars(data));
-    }, []);
+        dispatch(carAction.getAll());
+    }, [dispatch]);
 
     return (
         <div>
